@@ -1,0 +1,168 @@
+doctype html
+html(lang="ru")
+head
+    meta(charset='utf-8')   
+    meta(name='description', content='')  
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title="Комар Алекс" 
+    link(rel='apple-touch-icon', href='apple-touch-icon.png')
+    // Place favicon.ico in the root directory
+  
+    // build:css styles/main.css
+    link(rel='stylesheet', href='styles/main.css')
+    // endbuild
+      // build:css styles/vendor.css
+    // bower:css
+    link(rel='stylesheet', href='/bower_components/font-awesome/css/font-awesome.css')
+    // endbower
+    // endbuild
+    // build:js scripts/vendor/modernizr.js
+    script(src='/bower_components/modernizr/modernizr.js')
+    // endbuild
+    // yandex shara begin
+    script(type='text/javascript', src='//yastatic.net/es5-shims/0.0.2/es5-shims.min.js', charset='utf-8')
+    script(type='text/javascript', src='//yastatic.net/share2/share.js', charset='utf-8')
+    // yandex shara end
+  body
+    include ./mixins/mixins.jade
+    header.header
+      nav.nav
+        .container
+          .row
+            .col-md-10.col-md-offset-1     
+              ul.ul__nav.sm#smartmenu
+                li.li__nav
+                  a.a__nav Главная
+                li.li__nav
+                  a.a__nav О компании
+                li.li__nav
+                  a.a__nav Услуги и стоимость
+                  ul.ul__nav
+                    li.li__nav
+                      a.a__nav Подменю1
+                    li.li__nav
+                        a.a__nav Подменю2
+                li.li__nav
+                  a.a__nav Сертификаты
+                li.li__nav
+                  a.a__nav Статьи
+                li.li__nav
+                  a.a__nav Контакты
+              .sub-menu__nav    
+                ul.ul-sub__nav
+                  li.li-sub__nav
+                    a.a-sub__nav Главная
+                  li.li-sub__nav
+                    a.a-sub__nav О компании
+                  li.li-sub__nav
+                    a.a-sub__nav Услуги и стоимость
+                    ul.ul-sub__nav
+                      li.li-sub__nav
+                        a.a-sub__nav Подменю1
+                      li.li-sub__nav
+                        a.a-sub__nav Подменю2
+                  li.li-sub__nav
+                    a.a-sub__nav Сертификаты
+                  li.li-sub__nav
+                    a.a-sub__nav Статьи
+                  li.li-sub__nav
+                    a.a-sub__nav Контакты
+            .col-md-1
+              div.burger
+                div.icon__burger        
+      .top-line
+        .container
+          .row.line2
+            .col-md-2.col-xs-4
+              .img-wrap
+                img.logo__top-line(src="images/logo.png", alt="Юрдис")
+            .col-md-6
+              .info__top-line
+                .address
+                  span.header__adress Адреса оргинизаций
+                  .item__adress
+                    i.fa.fa-map-marker
+                    span.text__adress г.Москва, ул. Соколовского, д.3, офис №305
+                  .item__adress
+                    i.fa.fa-map-marker
+                    span.text__adress г.Москва, ул. Соколовского, д.3, офис №305
+                .work-time
+                  span.header__work-time Время работы
+                  .item__work-time
+                    i.fa.fa-clock-o
+                    span.text__work-time пн-пт с 10-00 -18-00; перерыв с 13-00 до 14-00 сб-вс выходной день
+            .col-md-4.col-xs-8
+              .contacts__top-line
+                .phone
+                  i.fa.fa-phone
+                  span.span__phone
+                    span.grey-letter 8(929)
+                    span 333-777-88, 333-777-88
+                .email
+                  span.grey-letter E-MAIL:
+                  span emailsender@gmail.com
+                button.main-button.bottom-top-line Заказать звонок
+      .slider
+        .container
+          .row
+            .col-xs-12
+              .wrap__slider.owl-carousel
+                +slide
+                +slide
+                +slide
+      .reviews
+        .container
+          .row
+            .col-md-3.col-sm-6.col-sx-12
+              .wrap-item__reviews
+                i.fa.fa-star
+                span.number__reviews 10
+                span.text__reviews Мы уже 10 лет на рынке оценки Москвы
+            .col-md-3.col-sm-6.col-sx-12
+              .wrap-item__reviews
+                i.fa.fa-star
+                span.number__reviews 124
+                span.text__reviews У нас 124 довольных компаний-клиентов
+            .col-md-3.col-sm-6.col-sx-12
+              .wrap-item__reviews
+                i.fa.fa-star
+                span.number__reviews 12
+                span.text__reviews Мы имеем 12 офисов в Москве и подмосковье
+            .col-md-3.col-sm-6.col-sx-12
+              .wrap-item__reviews
+                i.fa.fa-star
+                span.number__reviews 5
+                span.text__reviews Работаем более 5 лет с крупными клиентами
+
+               
+    //
+      [if lt IE 10]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <![endif]  
+    
+
+    // Google Analytics: change UA-XXXXX-X to be your site's ID.
+    script.
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='https://www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X');ga('send','pageview');
+
+    // build:js scripts/vendor.js
+    // bower:js
+    script(src='/bower_components/jquery/dist/jquery.js')
+    // endbower
+    // endbuild
+    // build:js scripts/plugins.js
+    script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js')
+    script(src='/bower_components/owlcarousel/owl-carousel/owl.carousel.js')
+    script(src='/bower_components/lightbox2/dist/js/lightbox.js')
+    script(src='/bower_components/smartmenus-sass/src/jquery.smartmenus.js')
+    script(src='/bower_components/owlcarousel/owl-carousel/owl.carousel.js')
+
+    // endbuild
+    // build:js scripts/main.js
+    script(src='scripts/main.js')
+    // endbuild

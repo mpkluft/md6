@@ -1,0 +1,14 @@
+@mixin myPlaceholder{
+  &::-webkit-input-placeholder {@content};
+  &:-moz-placeholder           {@content};
+  &::-moz-placeholder          {@content};
+  &:-ms-input-placeholder      {@content};
+}
+
+@mixin pseudoElement($width, $height){
+  position: absolute;
+  display: block;
+  content: "";
+  width: $width;
+  height: $height;
+}
