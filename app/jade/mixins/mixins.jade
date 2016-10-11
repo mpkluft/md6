@@ -8,3 +8,20 @@ mixin slide
 			button.main-button.button__slider Список услуг
 		.img-wrap__slider
 			img.img__slider(src="images/slide-img-1.png", alt="")
+
+mixin services__item(img,name,price)
+	.services__item-wrap
+		.services__item
+			.services__img-wrap
+				img.services__img(src=img, alt="")
+			.services__describe
+				h3.services__name=name
+				.services__stars-wrap
+					img.services__stars-img(src="images/whiteStars.jpeg", alt="")
+				.services__price
+					img.services__price-img(src="images/price.jpeg", alt="")
+					span.services__price-span
+					|	от
+					b.services__price-b=price
+					|	руб.
+				button.main-button.services__button Подробнее

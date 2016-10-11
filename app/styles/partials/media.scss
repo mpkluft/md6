@@ -10,6 +10,15 @@
       left: 1px;
     }
   }
+  .services__name {
+		font-size: 12px;
+	}
+	.services__price-b {
+		font-size: 20px;
+	}
+	.services__img-wrap {
+    height: 170px;
+	}
 }
 
 /* Medium Devices, Desktops */
@@ -36,12 +45,23 @@
     font-size: 13px;
   }
   div.wrap-item__reviews{
-  .fa{
-    top: 0;
-    left: 17px;
-  }
-} 
-
+	  .fa{
+	    top: 0;
+	    left: 17px;
+	  }
+	}
+	.services__item {
+		width: 50%;
+	}
+	.services__name {
+		font-size: 18px;
+	}
+	.services__price-b {
+		font-size: 30px;
+	}
+	.services__img-wrap {
+    height: 190px;
+	}
 }
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
@@ -84,10 +104,16 @@ div.wrap-item__reviews{
     left: 4px;
   }
 } 
-
-
 // end owlcarousel
-
+.services__item {
+	width: 50%;
+}
+.services__img-wrap {
+	height: 170px;
+}
+.services__price-b {
+	font-size: 20px;
+}
 
 }
 /* Extra Small Devices, Phones */
@@ -129,6 +155,16 @@ div.wrap-item__reviews{
       display: none;
     }
   }
+
+  .services__item {
+		width: 100%;
+	}
+	.services__img-wrap {
+		height: 190px;
+	}
+	.services__price-b {
+		font-size: 30px;
+	}
  
 }
 

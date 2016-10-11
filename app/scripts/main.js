@@ -82,6 +82,29 @@ $(".owl-carousel").owlCarousel({
 	navigation: true,
 	navigationText: ["назад", "вперед"]
 });
+
+$('.services__item').each(function(){
+	$(this).hover(
+		function(){
+			var width
+					width = $(this).width() + $(this).width()*0.2,
+					height = $(this).height() + $(this).height()*0.1;
+
+			console.log(height);
+			$(this).css({
+				width: width,
+				height: height,
+				position: "absolute"
+			})
+		},
+		function(){
+			$(this).css({
+				width: "",
+				height: "",
+				position: ""
+			})
+		});
+});
 	
 })
 

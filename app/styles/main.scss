@@ -60,66 +60,7 @@ a {
   background-color: lighten($mainColor, 5%);
   text-align: center;
 }
-/*
-.ul__nav {
-  display: inline-block;
-}
 
-.li__nav {
-  display: inline-block;
-  position: relative;
-  &:hover {
-    .ul__nav {
-      display: block;
-    }
-  }
-  .ul__nav {
-    position: absolute;
-    left: 0;
-    background-color: lighten($mainColor, 5%);
-    width: 100%;
-    display: none;
-    .li__nav{
-      display: block;
-      .sub,
-      .a__nav {
-        padding: 7px 10px;
-      }
-    }
-  }
-}
-.sub,
-.a__nav {
-  font-family: $mainFont;
-  color: $secondTextColor;
-  font-size: 12px;
-  padding: 23px 20px;
-  display: block;
-  cursor: pointer;
-  
-  &:hover {
-    color: $accentColor;
-    background-color: $mainColor;
-  }
-  .fa {
-    position: relative;
-    &:before {
-      font-size: 10px;
-      position: absolute;
-      top: -10px;
-      left: 4px;
-    }
-  }
-}
-
-.a__nav_current {
-  color: $accentColor;
-  background-color: $mainColor;
-}
-
-// nav end
-
-*/
 ul.sm::after {
   display: inline;
 }
@@ -456,5 +397,78 @@ ul.sm::after {
   color: #797484;
   padding-left: 10px;
 }
+
+// .content begins 
+.services__name {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 16px;
+  height: 54px;
+  overflow: hidden;
+}
+
+.services__stars-wrap {
+  text-align: center;
+}
+
+.services__items-wrap {
+  font-size: 0;
+}
+
+.services__price{
+  margin: 0 0 13px 0;
+  text-align: center;
+}
+
+.services__price-img,
+.services__price-span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.services__price-b {
+  font-size: 30px;
+  padding: 0 5px;
+}
+
+.services__button {
+  width: 100%;
+  padding: 8px 0;
+  font-weight: bold;
+}
+
+.services__item {
+  width: 100%;
+  font-size: 17px;
+  border: 2px solid #311d53;
+  background-color: #fff;
+  &:hover {
+    z-index: 100;
+  }
+}
+.services__items-wrap {
+  border: 2px solid #311d53;
+}
+.services__img-wrap {
+  height: 194px;
+  overflow: hidden;
+}
+.services__img {
+  width: 150%;
+}
+
+.services__item-wrap {
+  position: relative;
+  display: inline-block;
+  width: 25%;
+  vertical-align: top;
+}
+
+.services__describe {
+  margin: 20px 27px;
+}
+
+
+// .content end
 
 @import "partials/media.scss";
